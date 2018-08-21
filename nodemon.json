@@ -1,0 +1,9 @@
+{
+  "verbose": true,
+  "ignore": [
+    "server/public/javascripts/"
+  ],
+  "events": {
+    "restart": "npm run assets-compile"
+  }
+}
