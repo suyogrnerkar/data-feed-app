@@ -1,7 +1,8 @@
 {
   "verbose": true,
   "ignore": [
-    "server/public/javascripts/"
+    "server/public/javascripts/",
+    ".git/*"
   ],
   "events": {
     "restart": "npm run assets-compile"
