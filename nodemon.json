@@ -6,5 +6,6 @@
   ],
   "events": {
     "restart": "npm run assets-compile"
-  }
+  },
+  "delay": "500"
 }

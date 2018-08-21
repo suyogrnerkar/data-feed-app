@@ -1,5 +1,23 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{data}
+  div(class='container')
+    div(class='card')
+      div(class='card-header bg-success')
+        h1= title
+
+      div(class='card-body')
+        table(style='width:100%', border='0' class='table' data-page=page)
+          tr
+            th Title
+            th Name
+            th Age
+          each val in data
+            tr
+              td= val.title
+              td= val.id
+              td= val.shares
+
+        - var btnType = 'primary'
+        - var btnSize = 'sm'
+        button(type='button' class='btn btn-' + btnType + ' btn-' + btnSize + ' center') Load More

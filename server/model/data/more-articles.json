@@ -1008,5 +1008,30 @@
                 "name": "food and drug administration"
             }
         ]
+    },
+    {
+        "id": 72457,
+        "title": "FDA Trans Fat Ban Will Save Thousands Of Lives",
+        "publish_at": "2013-11-08 06:00:00",
+        "shares": 5,
+        "views": 181,
+        "image": "http://thumbs.policymic.com/uA36KeV2GYBDtRoTKPFNzCAcE_s=/11x11:2653x1677/500x315/s3.amazonaws.com/policymic-images/dc8ac17591224407daa0ce96dd07846cad7576dedd1b92c44c73bb085f800c45.jpg",
+        "url": "http://www.policymic.com/articles/72457/fda-trans-fat-ban-will-save-thousands-of-lives",
+        "words": 414,
+        "profile": {
+            "id": 19666,
+            "first_name": "Mike",
+            "last_name": "Serfas"
+        },
+        "tags": [
+            {
+                "id": 243,
+                "name": "Agriculture and Food"
+            },
+            {
+                "id": 33883,
+                "name": "food and drug administration"
+            }
+        ]
     }
 ]
