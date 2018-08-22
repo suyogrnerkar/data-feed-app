@@ -9,7 +9,7 @@ var timeSince = require('../../utils/dataTimeUtils');
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('index', {
-    title: 'Posts Demo App',
+    title: 'Posts Feed App',
     data: _.take(model.getData('init'), ARTICLES_PER_PAGE),
     page: 0,
     articlesPerPage: ARTICLES_PER_PAGE
