@@ -6,18 +6,29 @@ block content
       div(class='card-header bg-success')
         h1= title
 
-      div(class='card-body')
-        table(style='width:100%', border='0' class='table' data-page=page)
-          tr
-            th Title
-            th Name
-            th Age
-          each val in data
+      div(class='card-body' id='listContainer')
+        table(style='width:100%' class='table' id='articlesList' data-page=page data-articles-per-page=articlesPerPage)
+          thead
             tr
-              td= val.title
-              td= val.id
-              td= val.shares
+              th
+              th TITLE
+              th AUTHOR
+              th WORDS
+              th SUBMITTED
+              th SHARES
+              th VIEWS
+          tbody
+            each val in data
+              tr
+                td
+                  img(src=val.image class='articleImg')
+                td= val.title
+                td= val.profile.first_name + " " + val.profile.last_name
+                td= val.words
+                td= timeSince(new Date(val.publish_at)) + ' ago'
+                td= val.shares
+                td= val.views
 
         - var btnType = 'primary'
         - var btnSize = 'sm'
-        button(type='button' class='btn btn-' + btnType + ' btn-' + btnSize + ' center') Load More
+        button(type='button' class='btn btn-' + btnType + ' btn-' + btnSize + ' center' id='loadMore') Load More
