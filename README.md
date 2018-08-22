@@ -39,3 +39,9 @@ Steps to follow to start the server :
            views, router, etc.
 - utils :  any utilities that may be required (time utils for now)
 - Also, package.json and nodemon config files.
+
+# Future refactoring :
+- The code inside the routes could be moved to the respective models
+  into the separate functions.
+- The timeSince() utility function could has a better alternative
+  Moment library but here it would have been an overkill.
