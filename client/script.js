@@ -6,15 +6,21 @@ require('tablesorter');
 $(document).ready(function () {
 
   var page = $("#articlesList").attr('data-page');
-  $("#articlesList").tablesorter({
-    headers: {
-      0: { sorter: false },
-      1: { sorter: false },
-      2: { sorter: false },
-      5: { sorter: false },
-      6: { sorter: false }
-    }
-  });
+  $("#articlesList")
+    .on('sortEnd', function () {
+      localStorage.setItem('sortParams', JSON.stringify(this.config.sortList));
+    })
+    .tablesorter({
+      sortList: JSON.parse(localStorage.getItem('sortParams')),
+      headers: {
+        0: { sorter: false },
+        1: { sorter: false },
+        2: { sorter: false },
+        5: { sorter: false },
+        6: { sorter: false }
+      }
+    });
+
   $.get(window.location.href + "data?page=" + page, function (data) {
     localStorage.setItem('articles', JSON.stringify(data));
   });
